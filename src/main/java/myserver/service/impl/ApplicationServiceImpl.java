@@ -1,33 +1,33 @@
 package myserver.service.impl;
 
+import myserver.model.Application;
 import myserver.model.User;
-import myserver.service.UserService;
+import myserver.service.ApplicationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class ApplicationServiceImpl implements ApplicationService{
 
     @Override
-    public List<User> findAll() {
+    public List<Application> findAll() {
         return null;
     }
 
     @Override
-    public List<User> save(User user) {
+    public List<Application> save(Application application) {
         return null;
     }
 
     @Override
-    public List<User> update(User user) {
+    public List<Application> update(User user) {
         return null;
     }
 
     @Override
-    public List<User> delete(Long id) {
+    public List<Application> delete(Long id) {
         return null;
     }
 }

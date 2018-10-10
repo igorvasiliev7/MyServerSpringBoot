@@ -4,7 +4,6 @@ import myserver.model.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserService extends CRUD<User>{
 
-    List<User> findAll();
 }
