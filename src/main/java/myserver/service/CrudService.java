@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public interface CRUD<T> {
-    public List<T> findAll();
-    public List<T> save(T t);
-    public List<T> update(User user);
-    public List<T> delete(Long id);
+public interface CrudService<T, ID> {
+
+    List<T> findAll();
+
+    T findOne(ID id);
+
+    T save(T entity);
+
+    T update(T entity);
+
+    boolean delete(ID id);
 }

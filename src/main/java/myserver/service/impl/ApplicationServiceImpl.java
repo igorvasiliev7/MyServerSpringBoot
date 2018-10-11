@@ -17,17 +17,22 @@ public class ApplicationServiceImpl implements ApplicationService{
     }
 
     @Override
-    public List<Application> save(Application application) {
+    public Application findOne(Long id) {
         return null;
     }
 
     @Override
-    public List<Application> update(User user) {
+    public Application save(Application application) {
         return null;
     }
 
     @Override
-    public List<Application> delete(Long id) {
+    public Application update(Application application) {
         return null;
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
     }
 }

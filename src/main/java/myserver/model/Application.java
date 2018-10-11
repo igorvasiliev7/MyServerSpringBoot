@@ -1,8 +1,17 @@
 package myserver.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "applications")
 public class Application {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "site")
     private int size;
 
     public Application() {

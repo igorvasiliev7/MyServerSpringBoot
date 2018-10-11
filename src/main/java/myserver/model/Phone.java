@@ -1,10 +1,20 @@
 package myserver.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "phones")
 public class Phone {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "os")
     private String os;
+    @Column(name = "price")
     private int price;
 
     public Phone() {

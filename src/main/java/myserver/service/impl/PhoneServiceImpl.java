@@ -14,24 +14,28 @@ import java.util.List;
 @Service
 public class PhoneServiceImpl implements PhoneService {
 
-
     @Override
     public List<Phone> findAll() {
         return null;
     }
 
     @Override
-    public List<Phone> save(Phone phone) {
+    public Phone findOne(Long id) {
         return null;
     }
 
     @Override
-    public List<Phone> update(User user) {
+    public Phone save(Phone phone) {
         return null;
     }
 
     @Override
-    public List<Phone> delete(Long id) {
+    public Phone update(Phone phone) {
         return null;
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
     }
 }

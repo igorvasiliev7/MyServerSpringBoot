@@ -11,7 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 @RestController
-@RequestMapping("app")
+@RequestMapping("api/applications")
 public class ApplicationController {
     @Autowired
     private ApplicationService applicationService;
