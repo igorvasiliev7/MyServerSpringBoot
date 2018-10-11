@@ -32,7 +32,7 @@ public class UserController {
     public ResponseEntity<User> findOne(@PathVariable("id") Long id) {
         // GET /api/users/findOne/3
         // GET /api/events/3/attributes
-        final User user = userService.findOne(null);
+        final User user = userService.findOne(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 

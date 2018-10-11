@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
     public User save(User user) {
         notNull(user,"user");
         if (userRepository.findByEmail(user.getEmail()) != null) {
+            System.out.println("Duplicate email");
             return null;
         }
         return userRepository.save(user);
@@ -49,6 +50,6 @@ public class UserServiceImpl implements UserService {
     public boolean delete(Long id) {
         notNull(id, "id is null");
         userRepository.deleteById(id);
-        return userRepository.findById(id).isPresent();
+        return !userRepository.findById(id).isPresent();
     }
 }

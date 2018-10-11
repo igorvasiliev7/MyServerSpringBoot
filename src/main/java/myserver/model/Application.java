@@ -11,7 +11,7 @@ public class Application {
     private Long id;
     @Column(name = "name")
     private String name;
-    @Column(name = "site")
+    @Column(name = "size")
     private int size;
 
     public Application() {
