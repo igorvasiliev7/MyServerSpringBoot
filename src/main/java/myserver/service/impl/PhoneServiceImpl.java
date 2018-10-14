@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.LinkedList;
 import java.util.List;
 
+import static org.springframework.util.Assert.notNull;
+
 @Service
 public class PhoneServiceImpl implements PhoneService {
 
@@ -22,31 +24,30 @@ public class PhoneServiceImpl implements PhoneService {
 
     @Override
     public List<Phone> findAll() {
-
         return phoneRepository.findAll();
     }
 
     @Override
     public Phone findOne(Long id) {
-        Assert.notNull(id, "id is null");
+        notNull(id, "id is null");
         return phoneRepository.findById(id).orElse(null);
     }
 
     @Override
     public Phone save(Phone phone) {
-        Assert.notNull(phone, "phone is null");
+        notNull(phone, "phone is null");
         return phoneRepository.save(phone);
     }
 
     @Override
     public Phone update(Phone phone) {
-        Assert.notNull(phone, "phone is null");
+        notNull(phone, "phone is null");
         return phoneRepository.saveAndFlush(phone);
     }
 
     @Override
     public boolean delete(Long id) {
-        Assert.notNull(id, "id is null");
+        notNull(id, "id is null");
         phoneRepository.deleteById(id);
 
         return !phoneRepository.findById(id).isPresent();
