@@ -2,6 +2,7 @@ package myserver.dto;
 
 public class OrderDTO {
     private Long id;
+    private Long userId;
     private String username;
     private String email;
     private String phoneName;
@@ -14,8 +15,9 @@ public class OrderDTO {
     public OrderDTO() {
     }
 
-    public OrderDTO(Long id, String username, String email, String phoneName, String os, int price, String orderName, String address, String date) {
+    public OrderDTO(Long id, Long userId, String username, String email, String phoneName, String os, int price, String orderName, String address, String date) {
         this.id = id;
+        this.userId = userId;
         this.username = username;
         this.email = email;
         this.phoneName = phoneName;
@@ -26,6 +28,13 @@ public class OrderDTO {
         this.date = date;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
     public Long getId() {
         return id;
     }
